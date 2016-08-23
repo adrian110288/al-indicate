@@ -1,0 +1,17 @@
+{
+  "name": "package",
+  "description": "Angular progress indicator components.",
+  "main": "index.js",
+  "authors": [
+    "Adrian Lesniak"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/adrian110288/al-indicate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

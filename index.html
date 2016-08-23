@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="libraryTestApp">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Al-Indicate Showcase</title>
+    <meta name="description" content="DESCRIPTION">
+    <link rel="stylesheet" href="dist/alindicate.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="dist/alindicate.min.js"></script>
+    <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- <div class="indicator-one-container" ng-controller="ctrl">
+      <al-indicator-one progress="progress" on-complete="complete()"></al-indicator-one>
+    </div> -->
+
+    <div class="indicator-two-container">
+        <al-indicator-two></al-indicator-two>
+    </div>
+
+    <script>
+      angular.module('libraryTestApp', ['alIndicate']);
+      angular.module('libraryTestApp').controller('ctrl', function($scope) {
+
+          $scope.progress = 0.0;
+          setInterval(function() {
+              $scope.progress = $scope.progress%1.0;
+              $scope.progress +=0.05;
+              $scope.$apply();
+          }, 300);
+
+          $scope.complete = function() {
+              console.log('complete');
+          }
+      });
+      angular.module('libraryTestApp').controller('ctrl2', function($scope) {
+      });
+
+    </script>
+  </body>
+
+</html>

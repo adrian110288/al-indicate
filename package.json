@@ -1,0 +1,28 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "Angular progress indicator components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrian110288/al-indicate.git"
+  },
+  "author": "Adrian Lesniak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrian110288/al-indicate/issues"
+  },
+  "homepage": "https://github.com/adrian110288/al-indicate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-scss": "^1.4.0",
+    "gulp-watch": "^4.3.9"
+  }
+}
