@@ -29,6 +29,10 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+dist
+bower_components
+.gulp-scss-cache
+.sass-cache
 
 # Optional npm cache directory
 .npm

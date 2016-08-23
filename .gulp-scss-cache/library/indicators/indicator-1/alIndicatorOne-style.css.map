@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,cAAe;EACX,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,eAAe;EAEvB,gDAAkC;IAC9B,QAAQ,EAAE,QAAQ;IAClB,GAAG,EAAE,CAAC;IACN,IAAI,EAAE,CAAC;IACP,MAAM,EAAE,IAAI;IACZ,gBAAgB,EAAE,KAAK;IACvB,UAAU,EAAE,eAAe",
-"sources": ["../../../../library/indicators/indicator-1/alIndicatorOne-style.scss"],
-"names": [],
-"file": "alIndicatorOne-style.css"
-}
