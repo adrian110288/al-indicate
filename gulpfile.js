@@ -21,4 +21,8 @@ gulp.task('styles', function() {
   pipe(gulp.dest(distPath));
 });
 
+gulp.task('watch', function() {
+    gulp.watch([cssPath, jsPath], ['default']);
+})
+
 gulp.task('default', ['scripts', 'styles']);

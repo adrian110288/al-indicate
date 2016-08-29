@@ -1,0 +1,40 @@
+.indicator-three {
+  background-color: rgba(255,255,255,.2);
+  width: 100%;
+  height: 20px;
+  position: relative;
+  border-radius: 5px;
+
+  .indicator-progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .node {
+      float: left;
+      height: 100%;
+      width: 100/50*1%;
+      transition: all ease-in 0.3s;
+      left: 2%;
+      opacity: 0;
+      position: relative;
+      background-color: red;
+
+      &:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+
+      &.highlight {
+        left: 0;
+        opacity: 1.0;
+      }
+    }
+  }
+}

@@ -1,3 +1,11 @@
 body {
-    background-color: #222121;
+  background-color: #222121;
+  font-family: 'Roboto', sans-serif;
+}
+
+section.indicator-container {
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+  }
 }

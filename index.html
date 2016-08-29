@@ -6,6 +6,8 @@
     <title>Al-Indicate Showcase</title>
     <meta name="description" content="DESCRIPTION">
     <link rel="stylesheet" href="dist/alindicate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="dist/alindicate.min.js"></script>
@@ -16,32 +18,44 @@
 
   <body>
 
-    <!-- <div class="indicator-one-container" ng-controller="ctrl">
-      <al-indicator-one progress="progress" on-complete="complete()"></al-indicator-one>
-    </div> -->
+    <div ng-controller="ctrl2">
+      <section class="indicator-container">
+        <h1>Indicator 1</h1>
+        <al-indicator-one progress="range"></al-indicator-one>
+      </section>
+      <section class="indicator-container">
+          <h1>Indicator 2</h1>
+          <al-indicator-two progress="range" display-value="displayValue"></al-indicator-two>
+      </section>
+      <section class="indicator-container">
+          <h1>Indicator 3</h1>
+          <al-indicator-three progress="range"></al-indicator-three>
+      </section>
 
-    <div class="indicator-two-container">
-        <al-indicator-two></al-indicator-two>
+      <input type="range" step="0.01" min="0" max="1.0" ng-model="range" ng-change="onRangeChange()">
     </div>
 
     <script>
       angular.module('libraryTestApp', ['alIndicate']);
       angular.module('libraryTestApp').controller('ctrl', function($scope) {
-
-          $scope.progress = 0.0;
-          setInterval(function() {
-              $scope.progress = $scope.progress%1.0;
-              $scope.progress +=0.05;
-              $scope.$apply();
-          }, 300);
-
-          $scope.complete = function() {
-              console.log('complete');
-          }
+        $scope.progress = 0.0;
+        setInterval(function() {
+          $scope.progress = $scope.progress % 1.0;
+          $scope.progress += 0.05;
+          $scope.$apply();
+        }, 300);
+        $scope.complete = function() {
+          console.log('complete');
+        }
       });
       angular.module('libraryTestApp').controller('ctrl2', function($scope) {
+        $scope.maxDisplayValue = 5000;
+        $scope.displayValue = 0;
+        $scope.range = 0.0;
+        $scope.onRangeChange = function() {
+          $scope.displayValue = parseInt($scope.range * $scope.maxDisplayValue);
+        }
       });
-
     </script>
   </body>
 
